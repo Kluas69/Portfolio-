@@ -62,7 +62,7 @@ export default function Contact() {
       color: "#1DBF73",
       icon: (
         <img
-          src="/Fiverr.png"
+          src="/fiverr.png"
           alt="Fiverr"
           width={28}
           height={28}
@@ -115,7 +115,7 @@ export default function Contact() {
         }}
       >
         {/* Big bold header — pro feel */}
-        <div className="reveal" style={{ marginBottom: 72 }}>
+        <div className="reveal" suppressHydrationWarning style={{ marginBottom: 72 }}>
           <div className="section-tag">📬 Let&apos;s Connect</div>
           <div
             style={{
@@ -171,7 +171,7 @@ export default function Contact() {
           }}
         >
           {/* LEFT — quick reach */}
-          <div className="reveal-left">
+          <div className="reveal-left" suppressHydrationWarning>
             <h3
               style={{
                 fontFamily: "var(--font-display)",
@@ -308,7 +308,7 @@ export default function Contact() {
           </div>
 
           {/* RIGHT — form */}
-          <div className="reveal">
+          <div className="reveal" suppressHydrationWarning>
             <div
               className="contact-form-card glass-card"
               style={{

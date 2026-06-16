@@ -52,7 +52,7 @@ export default function Testimonials() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Header */}
-        <div className="reveal" style={{ textAlign: "center", marginBottom: 64 }}>
+        <div className="reveal" suppressHydrationWarning style={{ textAlign: "center", marginBottom: 64 }}>
           <div className="section-tag">💬 Testimonials</div>
           <h2 className="section-title">What Clients <span>Say</span></h2>
           <p style={{ color: "var(--text-secondary)", marginTop: 14, fontSize: "0.92rem" }}>
@@ -69,6 +69,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <div key={i}
               className="reveal glass-card"
+              suppressHydrationWarning
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               style={{
@@ -142,7 +143,7 @@ export default function Testimonials() {
         </div>
 
         {/* Social proof strip */}
-        <div className="reveal" style={{
+        <div className="reveal" suppressHydrationWarning style={{
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: 40, marginTop: 56, flexWrap: "wrap",
         }}>

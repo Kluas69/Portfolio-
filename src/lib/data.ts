@@ -117,7 +117,7 @@ export const PROJECTS = [
     color: "#FFF3E0",
     accent: "#FF9800",
     icon: "🎯",
-    image: "/HabitTracker.png",
+    image: "/habittracker.png",
     link: "https://play.google.com/store/apps/developer?id=FocuslabsLLC",
     platform: "Android",
   },

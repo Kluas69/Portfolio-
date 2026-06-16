@@ -133,7 +133,7 @@ export default function Skills() {
       <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
 
         {/* Header */}
-        <div className="reveal" style={{ textAlign: "center", marginBottom: 52, padding: "0 24px" }}>
+        <div className="reveal" suppressHydrationWarning style={{ textAlign: "center", marginBottom: 52, padding: "0 24px" }}>
           <div className="section-tag">⚡ Expertise</div>
           <h2 className="section-title">Skills & <span>Proficiency</span></h2>
           <p style={{ color: "var(--text-secondary)", marginTop: 12, fontSize: "0.88rem", maxWidth: 400, margin: "12px auto 0" }}>
@@ -142,12 +142,12 @@ export default function Skills() {
         </div>
 
         {/* Marquee row */}
-        <div className="reveal" style={{ marginBottom: 52 }}>
+        <div className="reveal" suppressHydrationWarning style={{ marginBottom: 52 }}>
           <MarqueeRow items={ROW1} />
         </div>
 
         {/* What I Build */}
-        <div className="reveal skills-services" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, padding: "0 24px" }}>
+        <div className="reveal skills-services" suppressHydrationWarning style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, padding: "0 24px" }}>
           {SERVICES.map((svc, i) => (
             <div key={i} className="glass-card" style={{
               display: "flex", flexDirection: "column", alignItems: "center",

@@ -5,7 +5,7 @@ export default function Process() {
     <section id="process" style={{ padding: "100px 24px", background: "var(--bg)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
-        <div className="reveal" style={{ textAlign: "center", marginBottom: 56 }}>
+        <div className="reveal" suppressHydrationWarning style={{ textAlign: "center", marginBottom: 56 }}>
           <div className="section-tag">⚙️ Process</div>
           <h2 className="section-title">From Concept to Deployment — My <span>Seamless Development Process</span></h2>
           <p style={{ color: "var(--text-secondary)", marginTop: 14, fontSize: "0.92rem", maxWidth: 540, margin: "14px auto 0" }}>
@@ -16,7 +16,7 @@ export default function Process() {
         {/* Steps */}
         <div className="process-row" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, marginBottom: 64 }}>
           {PROCESS_STEPS.map((step, i) => (
-            <div key={i} className="reveal glass-card" style={{ textAlign: "center", padding: "32px 24px", borderRadius: "var(--radius)", position: "relative" }}>
+            <div key={i} className="reveal glass-card" suppressHydrationWarning style={{ textAlign: "center", padding: "32px 24px", borderRadius: "var(--radius)", position: "relative" }}>
               <div style={{
                 width: 56, height: 56, borderRadius: "50%",
                 background: "var(--accent-muted)", border: "2px solid var(--accent)",
@@ -37,7 +37,7 @@ export default function Process() {
         </div>
 
         {/* CTA Banner */}
-        <div className="cta-banner glass-card reveal" style={{
+        <div className="cta-banner glass-card reveal" suppressHydrationWarning style={{
           background: "linear-gradient(135deg, var(--accent-muted) 0%, rgba(255,140,90,0.12) 100%)",
           border: "1.5px dashed var(--accent)",
           borderRadius: 20, padding: "48px 40px",

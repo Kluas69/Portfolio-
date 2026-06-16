@@ -249,6 +249,7 @@ export default function Projects() {
         {/* ── Section header ── */}
         <div
           className="reveal"
+          suppressHydrationWarning
           style={{ textAlign: "center", marginBottom: 60 }}
         >
         
@@ -274,6 +275,7 @@ export default function Projects() {
         {/* ── Masonry Grid ── */}
         <div
           className="reveal proj-masonry"
+          suppressHydrationWarning
           style={{ columnCount: 3, columnGap: 24 }}
         >
           {PROJECTS.map((p, i) => (
@@ -284,6 +286,7 @@ export default function Projects() {
         {/* ── View all CTA ── */}
         <div
           className="reveal"
+          suppressHydrationWarning
           style={{ textAlign: "center", marginTop: 16 }}
         >
           <Link

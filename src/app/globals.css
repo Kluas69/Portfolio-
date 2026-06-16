@@ -187,43 +187,39 @@ body {
 }
 
 /* ── Scroll reveal ── */
-/* Elements are visible by default (server render).
-   JS adds .js-reveal after mount, which hides them,
-   then .visible makes them appear — no hydration mismatch. */
-.reveal.js-reveal {
+/* Default: fully visible (matches server render, no hydration mismatch).
+   JS adds .js-reveal after mount to opt elements into the animation,
+   then .visible is added by IntersectionObserver when they enter view. */
+
+.reveal.js-reveal:not(.visible),
+.reveal-left.js-reveal:not(.visible),
+.reveal-scale.js-reveal:not(.visible) {
   opacity: 0;
+}
+
+.reveal.js-reveal:not(.visible) {
   transform: translateY(24px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.js-reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-left.js-reveal {
-  opacity: 0;
+.reveal-left.js-reveal:not(.visible) {
   transform: translateX(-24px);
+}
+.reveal-scale.js-reveal:not(.visible) {
+  transform: scale(0.94);
+}
+
+.reveal.js-reveal,
+.reveal-left.js-reveal,
+.reveal-scale.js-reveal {
   transition:
     opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal-left.js-reveal.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
 
-.reveal-scale.js-reveal {
-  opacity: 0;
-  transform: scale(0.94);
-  transition:
-    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-}
+.reveal.js-reveal.visible,
+.reveal-left.js-reveal.visible,
 .reveal-scale.js-reveal.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: none;
 }
 
 /* ── Buttons ── */
